@@ -35,7 +35,7 @@ app.post('/api/send-email', async (req, res) => {
           {
             From: {
               Email: process.env.SENDER_EMAIL,
-              Name: process.env.SENDER_NAME || 'Моја Апликација'
+              Name: process.env.SENDER_NAME || 'Културен дом Македонски Брод'
             },
             To: [
               {
@@ -43,7 +43,7 @@ app.post('/api/send-email', async (req, res) => {
                 Name: toName || 'Корисник'
               }
             ],
-            Subject: subject || 'Порака од апликација',
+            Subject: subject || 'Билети',
             TextPart: message,
             HTMLPart: `<p>${message}</p>`
           }
